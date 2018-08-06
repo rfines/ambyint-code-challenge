@@ -1,0 +1,7 @@
+/.idea
+.DS_Store
+server/dist
+server/node_modules
+client/node_modules
+server/yarn-error.log
+client/yarn-error.log

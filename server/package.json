@@ -1,0 +1,65 @@
+{
+  "name": "robert-fines-ambyint-coding-challenge",
+  "version": "0.0.1",
+  "description": "A sample app to demonstrate my mastery of node and react",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon --ignore dist --exec npm run start",
+    "start": "npm run build && node dist/app.js",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files"
+  },
+  "dependencies": {
+    "@google/maps": "^0.5.5",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.3",
+    "csv-parser": "^1.12.1",
+    "express": "^4.13.3",
+    "lodash": "^4.17.10",
+    "mongodb": "^3.1.1",
+    "mongoose": "^5.2.6"
+  },
+  "engines": {
+    "node": "^8.11.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rfines/ambyint-coding-challenge"
+  },
+  "keywords": [
+    "node",
+    "google maps",
+    "express"
+  ],
+  "author": "Robert Fines",
+  "contributors": [
+    "Robert Fines <rfines@genjisbutler.com>"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-node8": "^1.2.0",
+    "nodemon": "^1.18.3",
+    "rimraf": "^2.6.2",
+    "webpack": "^4.16.4"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "^8.11.1"
+          }
+        }
+      ]
+    ]
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "test/*",
+      "docs/*"
+    ],
+    "delay": "2000"
+  }
+}
